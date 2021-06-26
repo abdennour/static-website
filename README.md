@@ -3,13 +3,14 @@ Simple website
 
 # Prerequisites
 
-- Web Server Nginx (or others like Apache, Live Server of VSCODE)
+- docker
 
 # Getting Started
 
-- Put the content of [src](src/) in the webserver www directory
-- Navigate to URL with this format:  http://localhost:<port-web-server>
+- build : `docker build -t static-website:v1 .`
+- run: `docker run --name c1 -p 7070:80 static-website:v1`
 
+Navigate to http://localhost:7070
 
 # Authors
 
