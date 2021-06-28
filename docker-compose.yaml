@@ -1,7 +1,14 @@
 version: '3.9'
 
 services:
-  c1:
+  frontend:
     build: .
     ports:
       - "7070:80"
+  #  docker run  -d -p 8080:8080 -e  ADMIN_PASSWORD=pass123 abdennour/dummy-rest-api-example
+  api:
+    image: abdennour/dummy-rest-api-example
+    ports:
+      - 9090:8080
+    environment:
+      ADMIN_PASSWORD: pass123
