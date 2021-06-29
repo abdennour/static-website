@@ -12,3 +12,9 @@ services:
       - 9090:8080
     environment:
       ADMIN_PASSWORD: pass123
+  api-ambassador:
+    image: nginx:1.21-alpine
+    ports:
+      - 9091:80
+    volumes:
+      - ./.cloudnative/nginx-conf-skip-cors:/etc/nginx/conf.d:ro
